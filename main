@@ -1,0 +1,28 @@
+#include <stack>
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+
+int main() {
+	string input;
+	stack <string> clothes;
+	
+	
+	while (input != "0") {
+		cout << "What clothes do you want to push?" << endl;
+		cin >> input;
+		clothes.push(input);
+	}
+	cout << "The Stacks size is : "<< clothes.size() << endl;
+	cout << "It's top is : "<< clothes.top() << endl;
+
+	cout << "Popping the stack elements: " << endl;
+	while (!clothes.empty()) {
+		cout << clothes.top() << " , " << endl;
+		clothes.pop();
+	}
+	cout << endl << endl;
+	cout << "It's size is now: " << clothes.size() << endl;
+}
